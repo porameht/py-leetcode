@@ -71,6 +71,16 @@ def majorityElement(nums):
     
     return result
 
+    # n = len(nums)
+    # res = []    
+    
+    # print(set(nums), 'set(nums)')
+    # for d in set(nums):
+    #     print(nums.count(d), 'nums.count(d)')
+    #     if nums.count(d) > n // 3:
+    #         res.append(d)
+    # return res
+
 print(majorityElement([3,2,3]))
 print(majorityElement([1]))
 print(majorityElement([1,2]))
