@@ -29,15 +29,11 @@
 # 0 <= prices[i] <= 104
 
 from typing import List
-
 def maxProfit(prices: List[int]) -> int:
-    profit = 0
-    min_price = float('inf')
-
-    for price in prices:
-        min_price = min(min_price, price)
-        profit = max(profit, price - min_price)
-
-    return profit
+    max_profit = 0
+    for i in range(1, len(prices)):
+        if prices[i] > prices[i-1]:
+            max_profit = max_profit + (prices[i] - prices[i-1])
+    return max_profit
 
 print(maxProfit([7,1,5,3,6,4]))
